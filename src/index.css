@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Palet Warna: Dark Elegance */
+  --bg-dark: #111111;
+  --bg-light: #F9F9F9;
+  --surface-dark: #1A1A1A;
+  --text-dark: #E5E5E5;
+  --text-light: #1C1C1E;
+  --accent: #38BDF8; /* Sky Blue */
+  --border-dark: #2A2A2A;
+}
+
+/* Font Kustom */
+body { font-family: 'Inter', sans-serif; }
+
+/* Styling Dasar */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Project List Hover Effect */
+.project-list-item {
+  transition: color 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+.project-list-item:not(.active) {
+  color: #6B7280; /* Gray-500 */
+}
+.project-list-item:not(.active):hover {
+  color: #D1D5DB; /* Gray-300 */
+}
+.project-list-item.active {
+  color: var(--accent);
+}
+
+/* Project Preview Transition */
+#project-preview-content {
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Custom scrollbar untuk daftar proyek */
+#project-list::-webkit-scrollbar {
+  width: 4px;
+}
+#project-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+#project-list::-webkit-scrollbar-thumb {
+  background: #4A4A4A;
+  border-radius: 2px;
+}
+#project-list::-webkit-scrollbar-thumb:hover {
+  background: #6A6A6A;
+}
+
+@keyframes ring-expand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.ring-animate {
+    animation: ring-expand 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}

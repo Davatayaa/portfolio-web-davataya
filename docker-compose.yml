@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # Nama layanan kita, bebas Anda namakan apa saja
+  portfolio-app:
+    # Perintah untuk membangun image dari Dockerfile di direktori saat ini (.)
+    build: .
+    # Nama yang akan diberikan pada container saat berjalan
+    container_name: my-portfolio
+    # Aturan port: <PORT_DI_SERVER>:<PORT_DI_CONTAINER>
+    # Anda bisa mengakses web dari server Anda di port 8080
+    ports:
+      - "8080:80"
+    # Kebijakan restart: akan selalu restart kecuali dihentikan secara manual
+    # Ini berguna jika server Anda reboot
+    restart: unless-stopped
