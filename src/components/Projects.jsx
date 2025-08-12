@@ -29,7 +29,7 @@ const Projects = () => {
           <div id="project-preview" className="sticky top-28 h-[500px]">
             {activeProject && (
               <div id="project-preview-content" className="opacity-100">
-                <img src={activeProject.image} alt={`Pratinjau ${activeProject.title}`} className="w-full h-64 object-cover rounded-lg mb-6 shadow-lg" />
+                <img src={activeProject.image} alt={`Pratinjau ${activeProject.title}`} className="w-full h-64 object-cover rounded-lg mb-6 shadow-lg" loading="lazy"/>
                 <h3 className="text-2xl font-bold mb-2">{activeProject.title}</h3>
                 <p className="text-gray-400 mb-4">{activeProject.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">

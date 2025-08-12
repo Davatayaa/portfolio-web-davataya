@@ -1,12 +1,14 @@
+import backendApiKost from '../assets/backend_api_kost/slider1.png';
+
 export const projectData = [
   {
     id: 1,
-    slug: 'infrastructure-monitoring',
-    shortTitle: "Monitoring System",
-    title: "Infrastructure Monitoring System",
-    description: "A real-time dashboard to monitor server and application health using Prometheus & Grafana.",
-    stack: ["DevOps", "Docker", "AWS"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    slug: 'backend-api-kost',
+    shortTitle: "RESTful API Admin Panel",
+    title: "RESTful API for Kost Management Panel",
+    description: "A high-performance RESTful API built with Go to power a comprehensive admin management panel for a boarding house (kost).",
+    stack: ["Go", "Gin", "MongoDB", "Docker", "Docker Compose", "JWT", "Google OAuth", "REST API", "Zerolog", "Gomail"],
+    image: backendApiKost,
     link: "#"
   },
   {

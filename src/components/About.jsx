@@ -11,14 +11,18 @@ const About = () => {
           </p>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4 text-left">
             <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="font-bold text-accent">Frontend</h3>
+              <p className="text-sm text-gray-400">React.js, HTML, CSS, JavaScript</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
               <h3 className="font-bold text-accent">Backend</h3>
-              <p className="text-sm text-gray-400">Go, Python, Node.js, REST & gRPC APIs</p>
+              <p className="text-sm text-gray-400">Go, Python, Java, n8n (Automation)</p>
             </div>
             <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
               <h3 className="font-bold text-accent">DevOps</h3>
-              <p className="text-sm text-gray-400">CI/CD, Docker, Kubernetes, Terraform</p>
+              <p className="text-sm text-gray-400">CI/CD, Docker, Kubernetes, Terraform, Linux Server, Proxmox</p>
             </div>
-            <div className="p-4 bg-white/5 border border-white/10 rounded-lg col-span-2 md:col-span-1">
+            <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
               <h3 className="font-bold text-accent">Cloud</h3>
               <p className="text-sm text-gray-400">AWS, Google Cloud, Vercel</p>
             </div>

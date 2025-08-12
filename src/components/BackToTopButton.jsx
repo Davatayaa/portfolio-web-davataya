@@ -37,7 +37,24 @@ const BackToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-accent p-3 text-white rounded-full shadow-lg hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-transform duration-200 hover:scale-110"
+          className="
+            bg-transparent 
+            border-2 border-transparent 
+            text-sky-400 
+            p-3 
+            rounded-full 
+            hover:border-sky-400 
+            active:border-sky-400 
+            hover:shadow-lg 
+            hover:shadow-sky-400/50 
+            hover:scale-110
+            focus:outline-none 
+            focus:ring-2 
+            focus:ring-offset-2 
+            focus:ring-sky-400 
+            transition-all 
+            duration-300
+          "          
           aria-label="Go to top"
         >
           {/* Ikon panah ke atas (SVG) */}

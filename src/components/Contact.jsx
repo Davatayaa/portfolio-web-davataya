@@ -10,7 +10,7 @@ const Contact = () => {
             Have an interesting project or idea? I'm always open to new opportunities and collaborations.
           </p>
           <a href="mailto:email@anda.com" className="text-2xl font-bold text-accent hover:underline">
-            email@gmail.com
+            davaatayaa@gmail.com
           </a>
         </div>
       </div>

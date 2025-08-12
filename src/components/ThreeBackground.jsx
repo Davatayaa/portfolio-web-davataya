@@ -14,7 +14,7 @@ const ThreeBackground = () => {
     function init3D() {
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(75, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
-      camera.position.z = 300;
+      camera.position.z = 150; 
 
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
@@ -41,7 +41,7 @@ const ThreeBackground = () => {
       
       const material = new THREE.PointsMaterial({
         color: 0x38BDF8,
-        size: 1.5,
+        size: 2.5, // <-- PERUBAHAN 1: Ukuran partikel diperbesar (sebelumnya 1.5)
         transparent: true,
         blending: THREE.AdditiveBlending,
         sizeAttenuation: true
@@ -102,7 +102,8 @@ const ThreeBackground = () => {
     };
   }, []);
 
-  return <div ref={mountRef} className="fixed inset-0 z-0 opacity-20" />;
+  // PERUBAHAN 2: Opacity ditingkatkan menjadi 30% (sebelumnya 20%)
+  return <div ref={mountRef} className="fixed inset-0 z-0 opacity-30" />;
 };
 
 export default ThreeBackground;

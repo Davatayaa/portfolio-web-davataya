@@ -8,10 +8,12 @@ const NotFound = () => {
       <h2 className="text-3xl font-bold mt-4">Page Not Found</h2>
       <p className="text-gray-400 mt-2 max-w-md">
         Sorry, the page you are looking for does not exist or may have moved.
-      </p>
+      </p><br></br>
       <Link 
         to="/" 
-        className="mt-8 bg-accent text-black font-semibold px-6 py-3 rounded-md hover:bg-sky-400 transition-colors"
+        className="border border-sky-400  font-semibold px-4 py-2 rounded-md 
+        transition-all duration-300 
+        hover:scale-105 hover:shadow-lg hover:shadow-sky-400/40 hover:text-white"
       >
         Back to Home Page
       </Link>

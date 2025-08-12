@@ -2,20 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-// Impor komponen halaman
 import App from './App.jsx';
+import ErrorLayout from './components/ErrorLayout.jsx'; 
 import Home from './pages/Home.jsx';
-import NotFound from "./pages/NotFound.jsx";
-
-// Impor halaman-halaman proyek baru Anda
-import SistemMonitoring from './pages/projects/SistemMonitoring.jsx';
+import NotFound from './pages/NotFound.jsx';
+import BackendApiKost from './pages/projects/BackendApiKost.jsx';
 import EcommerceApi from './pages/projects/EcommerceApi.jsx';
-// ...impor halaman proyek lainnya di sini
-
 import './index.css';
 
 const router = createBrowserRouter([
   {
+    // RUTE UTAMA: Menggunakan layout <App> yang memiliki Header
     path: '/',
     element: <App />,
     children: [
@@ -23,19 +20,26 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // Daftarkan setiap halaman proyek di sini
       {
-        path: 'project/infrastructure-monitoring', // <-- Gunakan slug
-        element: <SistemMonitoring />,
+        path: 'project/backend-api-kost', //slug from data/projects.js
+        element: <BackendApiKost />,
       },
       {
-        path: 'project/ecommerce-api', // <-- Gunakan slug
+        path: 'project/ecommerce-api',
         element: <EcommerceApi />,
       },
+      // ...rute proyek lainnya
+    ],
+  },
+  {
+    // RUTE KEDUA: Menggunakan layout <ErrorLayout> tanpa Header
+    element: <ErrorLayout />,
+    children: [
       {
-        path: '*',
+        path: '*', // Rute "catch-all" untuk 404
         element: <NotFound />,
       },
+      // Anda bisa menambahkan halaman lain di sini yang tidak butuh header
     ],
   },
 ]);
